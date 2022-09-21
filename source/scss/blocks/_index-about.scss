@@ -1,0 +1,16 @@
+.index-about {
+    padding: min(11.25vw, 180px) 0;
+
+    @include mobile {
+        padding: 0;
+
+        .container {
+            padding: 0;
+        }
+    }
+    @include for-small-tablet{
+        &__article{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        }
+}

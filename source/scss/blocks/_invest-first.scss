@@ -1,0 +1,9 @@
+.invest-first {
+    background-color: var(--bg-a);
+    padding: 30px 0 clamp(80px, 11.25vw, 180px);
+
+    &__top {
+        margin-bottom: clamp(30px, 3.75vw, 60px);
+
+    }
+}

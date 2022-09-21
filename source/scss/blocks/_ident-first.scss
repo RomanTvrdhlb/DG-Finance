@@ -1,0 +1,52 @@
+.ident-first{
+    background-color: var(--bg-a);
+    padding: 30px 0 clamp(80px, 11.25vw, 180px);
+
+    @include tablet{
+        padding-top: 80px;
+    }
+
+    &__top{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 20px;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        padding-top: clamp(40px, 5vw, 80px);
+        grid-gap: 40px;
+    }
+
+    &__form{
+        max-width: 800px;
+
+        p{
+            @include mobile{
+                grid-column: initial;
+            }
+        }
+
+        @include mobile{
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__label{
+        
+        @include mobile{
+            grid-column: initial;
+        }
+    }
+
+    &__btn{
+        width: 165px;
+        grid-column: 2;
+        
+        @include mobile{
+            grid-column: initial;
+            margin-left: auto;
+        }
+    }
+}

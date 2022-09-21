@@ -1,0 +1,7 @@
+.consequences-complaint{
+@include image-set('../img/how-bg');
+background-size: cover;
+background-position: center right;
+background-repeat: no-repeat;
+padding: 0 0 clamp(80px, 11.25vw, 180px);
+}

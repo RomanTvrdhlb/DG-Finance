@@ -1,0 +1,27 @@
+.modals-top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    &__title {
+        display: flex;
+        align-items: flex-start;
+        padding: 20px 40px;
+        gap: 10px;
+        border: 1px solid var(--color-e);
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 700;
+        font-size: clamp(16px, 1.203vw, 20px);
+        line-height: 115%;
+        text-transform: uppercase;
+        color: var(--color-f);
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 19.5px;
+        border-bottom: 1px solid var(--color-e);
+    }
+}

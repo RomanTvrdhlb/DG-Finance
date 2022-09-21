@@ -1,0 +1,28 @@
+.payment-methods {
+    max-width: 530px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    grid-gap: 30px;
+
+    &__title {
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: clamp(17px, 1.25vw, 20px);
+        line-height: 110%;
+        color: var(--color-a);
+    }
+
+    &__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: clamp(10px, 1.875vw, 30px) clamp(15px, 0.938vw, 30px);
+
+        @include mobile {
+            grid-template-columns: 100%;
+        }
+    }
+}

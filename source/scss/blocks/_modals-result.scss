@@ -1,0 +1,92 @@
+.modals-result {
+
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+
+    &__list {
+        display: grid;
+        grid-template-columns: 238px repeat(8, 1fr);
+
+        @include tablet{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include small-tablet{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        display: grid;
+        grid-template-rows: minmax(90px, 1fr) 50px;
+            border: 1px solid var(--color-e);
+
+        @include tablet{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: initial;
+            align-items: stretch;
+            min-height: 50px;
+        }
+
+        @include small-tablet{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(14px, 1.128vw, 15px);
+        line-height: 130%;
+        text-align: center;
+        padding: 5px;
+        color: var(--color-j);
+        background-color: var(--bg-i);
+
+        @include mobile{
+            justify-content: flex-start;
+            background-color: transparent;
+        }
+    }
+
+    &__value{
+        padding: 5px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(14px, 1.203vw, 16px);
+        line-height: 160%;
+        text-align: center;
+        color: var(--color-f);
+
+        @include mobile{
+            justify-content: flex-start;
+            
+        }
+    }
+
+    &__search{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        color: var(--color-b);
+        @include for-tablet{
+            display: none;
+        }
+    }
+}

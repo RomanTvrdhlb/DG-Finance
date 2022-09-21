@@ -1,0 +1,9 @@
+.propositions-info{
+    background-color: var(--bg-a);
+    padding: 30px 0 clamp(80px, 11.25vw, 180px);
+
+
+    @include tablet{
+        padding-top: 80px;
+    }
+}

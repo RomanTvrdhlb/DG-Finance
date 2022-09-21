@@ -1,0 +1,17 @@
+.invest-about {
+    padding: min(11.25vw, 180px) 0;
+    background-color: var(--bg-a);
+    
+    @include for-small-tablet{
+    &__article{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    }
+    @include mobile {
+        padding: 0;
+
+        .container {
+            padding: 0;
+        }
+    }
+}

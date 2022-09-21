@@ -1,0 +1,132 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  overflow-y: scroll !important;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+
+  transition: all 0.4s;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.modals-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: -webkit-fill-available;
+  padding: 20px;
+
+  pointer-events: none;
+
+@include mobile {
+    padding: 20px 0;
+  }
+}
+
+.modal {
+  display: none;
+  max-width: 1450px;
+
+  background-color: var(--bg-a);
+
+@include mobile {
+    width: 100%;
+  }
+
+  &.active {
+    display: block;
+
+    pointer-events: initial;
+  }
+}
+
+
+
+.modals-box {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 63px;
+
+  grid-gap: 40px;
+
+  p {
+    max-width: 756px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    font-family: var(--font-family);
+    color: var(--color-f);
+
+    grid-column: span 4;
+
+@include tablet {
+      grid-column: span 2;
+    }
+  }
+
+  &__form {
+    display: grid;
+    max-width: 960px;
+
+    grid-template-columns: 1fr 1fr 94px 165px;
+
+@include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__label {
+    @include tablet {
+      grid-column: span 2;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+
+    color: var(--bg-a);
+
+    background-color: var(--bg-c);
+
+    transition: all 0.4s;
+
+@include tablet {
+      width: 100%;
+
+      grid-row: 4;
+    }
+
+    &:hover {
+      color: var(--color-b);
+
+      background-color: transparent;
+    }
+
+    &--tranparent {
+      color: var(--bg-f);
+
+      background-color: transparent;
+
+      transition: all 0.4s;
+
+      &:hover {
+        color: var(--bg-a);
+
+        background-color: var(--bg-c);
+      }
+    }
+  }
+}

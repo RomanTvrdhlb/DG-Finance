@@ -1,0 +1,43 @@
+.breadcrums {
+  display: flex;
+
+  grid-gap: 20px;
+
+  @include mobile {
+    display: none;
+  }
+
+
+  &__item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 130%;
+    font-family: var(--font-family);
+    color: var(--color-b);
+
+    transition: all 0.4s;
+
+    &:not(:last-child) {
+      position: relative;
+
+      padding-right: 20px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -1px;
+
+        width: 2px;
+        height: 100%;
+
+        background-color: var(--bg-c);
+      }
+    }
+    &:last-child {
+      color: var(--color-j);
+
+      pointer-events: none;
+    }
+  }
+}

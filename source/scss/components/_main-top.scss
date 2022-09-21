@@ -1,0 +1,42 @@
+.main-top{
+    padding-top: 20px;
+    position: relative;
+    color: var(--color-b);
+    &__title{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 800;
+        font-size: clamp(25px, 1.875vw, 30px);
+        line-height: 105%;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: inherit;
+    }
+
+    &:before{
+        content: ' ';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 2px;
+        background: var(--color-c);
+        display: block;
+        max-width: 77px;
+        width: 100%;
+    }
+    &--yellow-line{
+        color: var(--color-a);
+        &::before{
+            background: var(--color-d);
+        }
+    }
+
+    &__subtitle{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(14px, 1vw, 16px);
+        line-height: 160%;
+        color: var(--color-f);
+    }
+}
